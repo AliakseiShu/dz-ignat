@@ -1,0 +1,48 @@
+.message {
+    display: flex;
+    width: 350px;
+    align-items: self-end;
+    background-color: greenyellow;
+    border: 10px solid greenyellow;
+}
+
+.message img {
+    width: 60px;
+    border-radius: 30px 30px 30px 30px;
+}
+
+.insideMessage {
+    padding: 10px 10px;
+    width: 210px;
+    height: auto;
+    display: block;
+    background: darkslategrey;
+    border-radius: 10px;
+    box-shadow: 5px 8px 5px #000;
+    position: relative;
+    margin: 10px;
+    border-radius: 10px 10px 10px 0px;
+}
+
+.name {
+    margin: 10px;
+    font-weight: bold;
+    color: mediumpurple;
+}
+
+.text {
+    margin: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.time {
+    font-size: 15px;
+    position: absolute;
+    bottom: 2px;
+    right: 15px;
+    text-transform: uppercase;
+    color: #999
+}
+
+
