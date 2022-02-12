@@ -1,9 +1,11 @@
 .message {
     display: flex;
+    align-items: flex-end;
     width: 350px;
-    align-items: self-end;
-    background-color: greenyellow;
-    border: 10px solid greenyellow;
+    height: 150px;
+ /*   align-items: self-end;*/
+    background-color: darkslategrey;
+    border: 10px solid darkslategrey;
 }
 
 .message img {
@@ -12,37 +14,49 @@
 }
 
 .insideMessage {
-    padding: 10px 10px;
-    width: 210px;
-    height: auto;
-    display: block;
-    background: darkslategrey;
+    padding: 10px;
+    width: 250px;
+    height: 100px;
+   /* display: block;*/
+  /*  background: darkslategrey;*/
     border-radius: 10px;
-    box-shadow: 5px 8px 5px #000;
+   /* box-shadow: 5px 8px 5px #000;*/
     position: relative;
-    margin: 10px;
+
     border-radius: 10px 10px 10px 0px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.angle {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle at 0 0, rgba(0, 0, 0, 0) 15px, rgba(255, 255, 255, 0.3) 0);
+
 }
 
 .name {
     margin: 10px;
     font-weight: bold;
-    color: mediumpurple;
+    color: aquamarine;
 }
 
 .text {
     margin: 10px;
     font-size: 18px;
     color: white;
+    word-wrap: break-word;
 }
 
 .time {
-    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+   /* font-size: 15px;
     position: absolute;
     bottom: 2px;
     right: 15px;
-    text-transform: uppercase;
-    color: #999
+    text-transform: uppercase;*/
+    color: greenyellow;
 }
 
 

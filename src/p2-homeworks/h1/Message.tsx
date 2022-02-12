@@ -11,6 +11,9 @@ const Message = (props: MessagePropsType) => {
   return (
     <div className={s.message}>
       <img src={props.avatar}/>
+
+      <div className={s.angle}/>
+
       <div className={s.insideMessage}>
         <h3 className={s.name}>{props.name}</h3>
         <p className={s.text}>{props.message}</p>
