@@ -1,9 +1,7 @@
 .message {
     display: flex;
     align-items: flex-end;
-    width: 350px;
-    height: 150px;
- /*   align-items: self-end;*/
+  /*   align-items: self-end;*/
     background-color: darkslategrey;
     border: 10px solid darkslategrey;
 }
