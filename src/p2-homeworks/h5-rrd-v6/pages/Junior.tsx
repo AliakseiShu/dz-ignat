@@ -8,7 +8,6 @@ import HW8 from "../../h8/HW8";
 const Junior = () => {
   return (
     <div>
-      Junior
       <HW7/>
       <HW8/>
       <HW9/>
