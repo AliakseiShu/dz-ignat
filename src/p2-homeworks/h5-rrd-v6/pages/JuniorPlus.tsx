@@ -5,7 +5,7 @@ const JuniorPlus = () => {
   return (
     <div>
       JuniorPlus
-   {/*   <HW12/>*/}
+      <HW12/>
     </div>
   );
 };
