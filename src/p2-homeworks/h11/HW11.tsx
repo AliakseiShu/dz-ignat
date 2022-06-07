@@ -9,14 +9,13 @@ function HW11() {
 
     const onChangeSuperRange = (value1: number, value2: number | number[]) => {
         setValue1(value1)
-        console.log(value2)
+
         //let newValues = value2
         //const newValue = [value1, props.value2[1]]
        // newValues[0] = (value2 as number)
         setValue2(value2 as number[])
     }
     const onChangeSuperDoubleRange = (event: Event, value: number | number[]) => {
-        console.log('VALUE2', value)
         setValue1((value as number[])[0])
         setValue2(value as number[]);
     };

@@ -9,7 +9,6 @@ const initState = {
     isLoading: false
 }
 
-
 export const loadingReducer = (state: initStateType = initState, action: LoadingActionType): initStateType => {
     switch (action.type) {
         case "LOADING": {
