@@ -1,43 +1,29 @@
-import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from 'react'
-import s from './SuperRange.module.css'
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
 
-// тип пропсов обычного инпута
-type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
+type SuperRangeType = {
+    value1: number
+    value2: number | number[]
+    onChangeSuperRange: (value1: number, value2: number | number[]) => void
+}
+export default function SuperRange(props:SuperRangeType) {
 
-// здесь мы говорим что у нашего инпута будут такие же пропсы как у обычного инпута
-// (чтоб не писать value: string, onChange: ...; они уже все описаны в DefaultInputPropsType)
-type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
-    onChangeRange?: (value: number) => void
-};
-
-const SuperRange: React.FC<SuperRangePropsType> = (
-    {
-        type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
-        onChange, onChangeRange,
-        className,
-
-        ...restProps// все остальные пропсы попадут в объект restProps
+    const onValueChange = (event: Event, value: number | number[]) => {
+        //@ts-ignore
+        const value2 = [value, props.value2[1]]
+        props.onChangeSuperRange(value as number, value2)
     }
-) => {
-    const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        onChange && onChange(e) // сохраняем старую функциональность
-
-        onChangeRange && onChangeRange(+e.currentTarget.value)
-    }
-
-    const finalRangeClassName = `${s.range} ${className ? className : ''}`
 
     return (
-        <>
-            <input
-                type={'range'}
-                onChange={onChangeCallback}
-                className={finalRangeClassName}
+        <Box sx={{width: 400}}>
+            <span>{props.value1}</span>
+            <Slider
+                value={props.value1}
+                defaultValue={20}
+                onChange={onValueChange}
 
-                {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
-        </>
-    )
+        </Box>
+    );
 }
-
-export default SuperRange
