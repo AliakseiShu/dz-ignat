@@ -13,10 +13,7 @@ export default function SuperDoubleRange(props: SuperDoubleRangeType) {
     return (
         <Box sx={{width: 400}}>
             <span>{props.value2[0]}</span>
-            <Slider
-                value={props.value2}
-                onChange={props.onChangeSuperDoubleRange}
-            />
+            <Slider value={props.value2} onChange={props.onChangeSuperDoubleRange}/>
             <span>{props.value2[1]}</span>
         </Box>
 
